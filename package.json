@@ -1,0 +1,39 @@
+{
+  "name": "acdrill-hr-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "@tanstack/react-query": "^5.101.0",
+    "date-fns": "^4.4.0",
+    "lucide-react": "^0.511.0",
+    "next": "15.5.19",
+    "next-pwa": "^5.6.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.79.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.5.0",
+    "jest": "^29.7.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19",
+    "ts-jest": "^29.4.11",
+    "typescript": "^5"
+  }
+}

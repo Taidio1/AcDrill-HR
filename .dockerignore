@@ -1,0 +1,23 @@
+node_modules
+.next
+npm-debug.log
+.git
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+Caddyfile
+.env
+.env.local
+.env*.local
+README.md
+.idea
+.vscode
+.fallow
+coverage
+*.log
+
+# wygenerowane przez next-pwa (powstaną ponownie podczas builda)
+public/sw.js
+public/workbox-*.js
+public/worker-*.js

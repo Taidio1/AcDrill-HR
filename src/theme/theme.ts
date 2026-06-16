@@ -1,0 +1,23 @@
+export const theme = {
+  colors: {
+    navy: '#18212E',
+    anthracite: '#2C3A4D',
+    orange: '#FF6A1A',
+    amber: '#FFC400',
+    success: '#1FA35A',
+    danger: '#E0392B',
+    warning: '#E0A53A',
+    info: '#2563A8',
+    ink: '#121821',
+    strong: '#243042',
+    muted: '#5A6678',
+    subtle: '#9AA3B0',
+    canvas: '#F4F6F8',
+    soft: '#EEF1F4',
+    line: '#DCE1E8',
+    lineSoft: '#E6EAEF',
+    white: '#FFFFFF',
+  },
+  radii: { sm: 9, control: 13, card: 16, lg: 20, round: 999 },
+  spacing: { xs: 4, sm: 8, md: 12, lg: 16, xl: 22, xxl: 30 },
+} as const;
