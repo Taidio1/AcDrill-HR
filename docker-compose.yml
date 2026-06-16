@@ -11,30 +11,12 @@ services:
     image: acdrill-hr-next
     container_name: acdrill-hr-next
     restart: unless-stopped
-    # Brak mapowania portów na hosta – ruch idzie wyłącznie przez Caddy
-    # po wewnętrznej sieci compose (web:3000).
-    expose:
-      - "3000"
+    # HTTPS zapewnia proxy mikr.usa – aplikacja serwuje zwykły HTTP na :3000.
+    # Subdomenę w panelu mikr.us kieruj na port 3000 (checkbox HTTPS odznaczony).
+    ports:
+      - "3000:3000"
     environment:
       NODE_ENV: production
       # Sekret używany po stronie serwera (API admina) – w RUNTIME, nie w buildzie.
       SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY}
       NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
-
-  caddy:
-    image: caddy:2-alpine
-    container_name: acdrill-caddy
-    restart: unless-stopped
-    depends_on:
-      - web
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-
-volumes:
-  caddy_data:
-  caddy_config:
