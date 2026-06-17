@@ -30,6 +30,7 @@ body {
   font-family: var(--font-ibm-plex-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  padding-top: env(safe-area-inset-top);
 }
 
 button,
