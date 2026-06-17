@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
 
 import './globals.css';
@@ -19,6 +19,15 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ['500', '600'],
   variable: '--font-ibm-plex-mono',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#FF6A1A',
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: 'AC-Drill HR',
@@ -43,9 +52,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
-      <head>
-        <meta name="theme-color" content="#FF6A1A" />
-      </head>
       <body
         className={`${archivo.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`}
       >
